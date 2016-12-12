@@ -1,0 +1,244 @@
+\section{SceneGraphNode Class Reference}
+\label{classSceneGraphNode}\index{SceneGraphNode@{SceneGraphNode}}
+{\tt \#include $<$SceneGraphNode.h$>$}
+
+Inheritance diagram for SceneGraphNode:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=400pt]{classSceneGraphNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class is the base class for all the scene graph nodes. 
+
+Definition at line 18 of file SceneGraphNode.h.\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf $\sim$SceneGraphNode} (void)
+\begin{CompactList}\small\item\em destructor virtual so that the children constructor will be called \item\end{CompactList}\item 
+std::string {\bf getName} (void)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Returns:]the descriptive name of the node \end{Desc}
+\item\end{CompactList}\item 
+{\bf vertex\_\-descriptor} {\bf getId} (void)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Returns:]the unique identifier of this node \end{Desc}
+\item\end{CompactList}\item 
+void {\bf setId} ({\bf vertex\_\-descriptor} id)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Warning:]this method should only be called once by the scene graph \end{Desc}
+\item\end{CompactList}\item 
+bool {\bf getIsInserted} (void)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Returns:]true if inserted into the scene graph otherwise false \end{Desc}
+\item\end{CompactList}\item 
+void {\bf setIsInserted} (bool isInserted)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Warning:]this method should only be called when added or removed from the scene graph \end{Desc}
+\item\end{CompactList}\item 
+{\bf NodeType} {\bf getNodeType} (void)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Returns:]the node type \end{Desc}
+\item\end{CompactList}\item 
+virtual void {\bf setState} (void)
+\begin{CompactList}\small\item\em sets the opengl state \item\end{CompactList}\item 
+virtual void {\bf draw} (void)
+\begin{CompactList}\small\item\em render this node using opengl \item\end{CompactList}\item 
+virtual void {\bf unsetState} (void)
+\begin{CompactList}\small\item\em unsets the state set by the setState \doxyref{SceneGraphNode::setState}{p.}{classSceneGraphNode_40d86f186ab25b8d40c6e20adffeca62} method \item\end{CompactList}\item 
+std::string {\bf toString} (void) const 
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf SceneGraphNode} (std::string name, {\bf NodeType} nodeType)
+\begin{CompactList}\small\item\em \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the descriptive name of the node \end{description}
+\end{Desc}
+\item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+std::ostream \& {\bf operator$<$$<$} (std::ostream \&os, const {\bf SceneGraphNode} \&obj)
+\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{SceneGraphNode@{SceneGraphNode}!SceneGraphNode@{SceneGraphNode}}
+\index{SceneGraphNode@{SceneGraphNode}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SceneGraphNode::SceneGraphNode (std::string {\em name}, {\bf NodeType} {\em nodeType})\hspace{0.3cm}{\tt  [protected]}}\label{classSceneGraphNode_31a8681558c25f77c999427feb5eabb0}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the descriptive name of the node \end{description}
+\end{Desc}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em nodeType}]The enumerated type of the node Constructor that should only be called by derived classes \end{description}
+\end{Desc}
+
+
+Definition at line 5 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!$\sim$SceneGraphNode@{$\sim$SceneGraphNode}}
+\index{$\sim$SceneGraphNode@{$\sim$SceneGraphNode}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SceneGraphNode::$\sim$SceneGraphNode (void)\hspace{0.3cm}{\tt  [virtual]}}\label{classSceneGraphNode_67964c41e0b681a927ba2e531f63102f}
+
+
+destructor virtual so that the children constructor will be called 
+
+
+
+Definition at line 12 of file SceneGraphNode.cpp.
+
+\subsection{Member Function Documentation}
+\index{SceneGraphNode@{SceneGraphNode}!getName@{getName}}
+\index{getName@{getName}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::string SceneGraphNode::getName (void)}\label{classSceneGraphNode_345c93c5c04b1672850772c1dec30279}
+
+
+\begin{Desc}
+\item[Returns:]the descriptive name of the node \end{Desc}
+
+
+
+
+Definition at line 16 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!getId@{getId}}
+\index{getId@{getId}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf vertex\_\-descriptor} SceneGraphNode::getId (void)}\label{classSceneGraphNode_9ed9288f48c632afde99a947299ca35f}
+
+
+\begin{Desc}
+\item[Returns:]the unique identifier of this node \end{Desc}
+
+
+
+
+Definition at line 21 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!setId@{setId}}
+\index{setId@{setId}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SceneGraphNode::setId ({\bf vertex\_\-descriptor} {\em id})}\label{classSceneGraphNode_9022e4fcf3929d2393c35c00ca008538}
+
+
+\begin{Desc}
+\item[Warning:]this method should only be called once by the scene graph \end{Desc}
+
+
+\begin{Desc}
+\item[{\bf Todo}]consider making this private / protected and making the scene graph a friend set the unique identifier\end{Desc}
+
+
+Definition at line 26 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!getIsInserted@{getIsInserted}}
+\index{getIsInserted@{getIsInserted}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool SceneGraphNode::getIsInserted (void)}\label{classSceneGraphNode_e1878f4bd851f635cd8a442a7118cc0e}
+
+
+\begin{Desc}
+\item[Returns:]true if inserted into the scene graph otherwise false \end{Desc}
+
+
+
+
+Definition at line 31 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!setIsInserted@{setIsInserted}}
+\index{setIsInserted@{setIsInserted}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SceneGraphNode::setIsInserted (bool {\em isInserted})}\label{classSceneGraphNode_c186a62f90271122eadd8afc35c94c23}
+
+
+\begin{Desc}
+\item[Warning:]this method should only be called when added or removed from the scene graph \end{Desc}
+
+
+\begin{Desc}
+\item[{\bf Todo}]consider making this private / protected and making the scene graph a friend set the status of this node to inserted in the scene graph\end{Desc}
+
+
+Definition at line 36 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!getNodeType@{getNodeType}}
+\index{getNodeType@{getNodeType}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf NodeType} SceneGraphNode::getNodeType (void)}\label{classSceneGraphNode_41018fe011296eb72d79cb0459fb2bf5}
+
+
+\begin{Desc}
+\item[Returns:]the node type \end{Desc}
+
+
+
+
+Definition at line 41 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!setState@{setState}}
+\index{setState@{setState}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SceneGraphNode::setState (void)\hspace{0.3cm}{\tt  [virtual]}}\label{classSceneGraphNode_40d86f186ab25b8d40c6e20adffeca62}
+
+
+sets the opengl state 
+
+
+
+Definition at line 46 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!draw@{draw}}
+\index{draw@{draw}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SceneGraphNode::draw (void)\hspace{0.3cm}{\tt  [virtual]}}\label{classSceneGraphNode_4eaee8385eae1564c3b20707722b7166}
+
+
+render this node using opengl 
+
+
+
+Definition at line 51 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!unsetState@{unsetState}}
+\index{unsetState@{unsetState}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SceneGraphNode::unsetState (void)\hspace{0.3cm}{\tt  [virtual]}}\label{classSceneGraphNode_81ea66f3cafe35f8351e7fcca8a44988}
+
+
+unsets the state set by the setState \doxyref{SceneGraphNode::setState}{p.}{classSceneGraphNode_40d86f186ab25b8d40c6e20adffeca62} method 
+
+
+
+Definition at line 56 of file SceneGraphNode.cpp.\index{SceneGraphNode@{SceneGraphNode}!toString@{toString}}
+\index{toString@{toString}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::string SceneGraphNode::toString (void) const}\label{classSceneGraphNode_a0b8f0b0b882c6e3de911964b46f79d8}
+
+
+
+
+Definition at line 67 of file SceneGraphNode.cpp.
+
+References nodeTypeToString().
+
+Referenced by operator$<$$<$().
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classSceneGraphNode_a0b8f0b0b882c6e3de911964b46f79d8_cgraph}
+\end{center}
+\end{figure}
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{classSceneGraphNode_a0b8f0b0b882c6e3de911964b46f79d8_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{SceneGraphNode@{SceneGraphNode}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SceneGraphNode@{SceneGraphNode}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (std::ostream \& {\em os}, const {\bf SceneGraphNode} \& {\em obj})\hspace{0.3cm}{\tt  [friend]}}\label{classSceneGraphNode_afdd9566f57fdc8aa45f89687105c795}
+
+
+
+
+Definition at line 61 of file SceneGraphNode.cpp.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf SceneGraphNode.h}\item 
+{\bf SceneGraphNode.cpp}\end{CompactItemize}

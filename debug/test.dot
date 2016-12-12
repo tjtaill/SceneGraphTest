@@ -1,0 +1,13 @@
+digraph G {
+Family;
+Gail;
+Troy;
+Chris;
+Travis;
+Joyce;
+Family->Gail ;
+Gail->Troy ;
+Gail->Chris ;
+Gail->Travis ;
+Troy->Joyce ;
+}
